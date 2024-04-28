@@ -1,8 +1,8 @@
 # IOB Mobile - Issues
-Dieses Repository dient nur dazu, Issues (Fehler, Wünsche, etc.) für IOB Mobile zu erfassen und zu bearbeiten. Der Code des Projektes wird nicht in diesem Repository verwaltet.
+Dieses Repository dient nur dazu, Issues (Fehler, Wünsche, etc.) für IOB Mobile zu erfassen und zu bearbeiten und stellt die Wiki Seiten mit Infos zur Konfiguration und Nutzung bereit. Der Code des Projektes wird nicht in diesem Repository verwaltet.
 
 ## Wiki
-Infos zur Konfiguration und Nutzung von IOB Mobile findest du [in unserem Wiki](https://git.thweb.net/pthaler/iob-mobile/wiki/IOB+Mobile+Quickstart).
+Infos zur Konfiguration und Nutzung von IOB Mobile findest du [in unserem Wiki](https://github.com/peter9teufel/iobmobile-issues/wiki/IOB-Mobile-Quickstart).
 
 ## Issue erstellen
 Gehe zu den [Issues](https://github.com/peter9teufel/iobmobile-issues/issues) um ein neues Issue zu eröffnen.
