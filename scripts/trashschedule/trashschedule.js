@@ -94,7 +94,9 @@ function updateJson(){
         let e = jsonData[i];
         let d = new Date(e.nextDate);
         let dStr = formatDate(d);
-        if(e.daysLeft == 1){
+        if(e.daysLeft == 0){
+            dStr = 'Heute';
+        }else if(e.daysLeft == 1){
             dStr = 'Morgen';
         }else if(e.daysLeft <= NUM_DAYS_INSTEAD_OF_DATE){
             dStr = 'in ' + e.daysLeft + ' Tagen';
