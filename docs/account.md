@@ -2,7 +2,7 @@
 
 Beim Start der App kommst du zum Login Screen, hier hast du die Möglichkeit, dich mit deinem IOB Mobile Account anzumelden oder einen neuen Account zu registrieren. Die Registrierung erfordert nur eine gültige E-Mail Adresse und ein selbst gewähltes Passwort. Du erhältst dann einen Link per E-Mail um deinen Account zu aktivieren, dieser Link **muss** auf deinem Gerät mit der installierten IOB Mobile App, auf dem du die Registrierung gestartet hast, geöffnet werden.
 
-<img style="margin: 16px 32px 16px 16px" src="../screenshots/framed/01-start_framed.png?raw=true" width="247" height="500">
+<img style="margin: 16px 32px 16px 16px" src="https://github.com/peter9teufel/iobmobile-issues/blob/main/screenshots/framed/01-start_framed.png?raw=true" width="247" height="500">
 
 IOB Mobile kann natürlich auch ohne User Account genutzt werden, die Registrierung bietet jedoch folgende Vorteile:
 * Sicherung aller Konfigurationen inkl. Dashboards im IOB Mobile Account (IOB Pro Abo)
