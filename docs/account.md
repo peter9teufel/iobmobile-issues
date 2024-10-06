@@ -13,7 +13,7 @@ IOB Mobile kann natürlich auch ohne User Account genutzt werden, die Registrier
 * Das Abo deiner IOB Pro Lizenz kann auf bis zu 5 Geräten der anderen Plattform geteilt werden, d.h. wenn du abonnierst IOB Pro auf deinem Hauptgerät das du regelmäßig nutzt (zB. unter iOS auf deinem iPhone), immer wenn du die App nutzt wird der Status deiner Lizenz im Account hinterlegt, über deinen IOB Mobile Account kannst du diese PRO Lizenz nicht nur auf all deinen iOS Geräten (und per Family Sharing auf den Geräten deiner Familien Accounts) sondern auch auf bis zu 5 Android Geräten die mit deinem IOB Mobile Account angemeldet sind nutzen!
 * zukünftige Erweiterungen für IOB Mobile User: sichern und wiederherstellen einzelner Konfigurationen und Dashboards, exklusiver Vorab Zugriff auf Funktionen 
 
-Mehr Infos zum IOB Pro Abo findest du unter dem Punkt <a href="./iob-pro.md">**IOB PRO Abo**</a>.
+Mehr Infos zum IOB Pro Abo findest du unter dem Punkt <a href="./iob-pro">**IOB PRO Abo**</a>.
 
 ### Account Sharing
 Natürlich kannst du deinen Account mit anderen Personen teilen, um deine App Konfiguration über deinen Account auf andere Geräte zu übertragen, bedenke jedoch:

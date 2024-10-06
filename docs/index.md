@@ -1,6 +1,6 @@
 ## Erste Schritte
 Der Start mit IOB Mobile kurz zusammengefasst:
-* <a href="./account.md">IOB Mobile Account</a> erstellen und anmelden (optional, bietet jedoch ein paar zusätzliche Funktionen und ein gratis Testzeitraum für das PRO Abo mit allen Funktionen)
+* <a href="./account">IOB Mobile Account</a> erstellen und anmelden (optional, bietet jedoch ein paar zusätzliche Funktionen und ein gratis Testzeitraum für das PRO Abo mit allen Funktionen)
 * Konfiguration erstellen, um die App mit deinem ioBroker zu verbinden
 * Seiten erstellen
 * Datenpunkte auswählen und konfigurieren
@@ -18,3 +18,11 @@ durchsuchen können und sich ebenfalls die Community gegenseitig helfen könnte.
 
 Last but not least gibt es auch noch einen Thread im ioBroker Forum (https://forum.iobroker.net/topic/75104/iob-mobile-app-f%C3%BCr-android-und-ios), dies sei aber nur der Vollständigkeit halber hier
 erwähnt. Der Thread wird doch mit der Zeit sehr unübersichtlich und schwer zu verfolgen, deshalb Fragen, Wünsche oder Fehler lieber als Github Issue oder der IOB Mobile Answer Plattform.
+
+## Inhalt
+* <a href="./account">IOB Mobile Account</a>
+* <a href="./config">Konfiguration</a>
+* <a href="./dashboard-config">Dashboard konfigurieren</a>
+* <a href="./settings">Einstellungen</a>
+* <a href="./view-options">Darstellungs-Optionen</a>
+* <a href="./iob-pro">IOB Mobile PRO Abo</a>
