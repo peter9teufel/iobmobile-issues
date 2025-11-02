@@ -5,6 +5,7 @@
 * <a href="./settings">Einstellungen</a>
 * <a href="./view-options">Darstellungs-Optionen</a>
 * <a href="./iob-pro">IOB Mobile PRO Abo</a>
+* <a href="./thermostat">Datenpunkt Typ Thermostat</a>
 
 ## Erste Schritte
 Der Start mit IOB Mobile kurz zusammengefasst:
