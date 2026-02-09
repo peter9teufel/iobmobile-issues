@@ -39,6 +39,8 @@ Dort legst du fest:
 
 Die Konfiguration ist **geräteabhängig** und wird aktuell **nicht synchronisiert**.
 
+Du kannst in den Widget-Einstellungen die Reihenfolge der ausgewählten Datenpunkte per Drag&Drop ändern. Auf iOS Geräten kannst du zudem einen ausgewählten Datenpunkt aus der Konfiguration einer Widget-Größe in eine andere kopieren.
+
 ---
 
 ## iOS Widgets
