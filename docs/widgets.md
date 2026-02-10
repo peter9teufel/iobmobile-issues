@@ -91,6 +91,9 @@ Die **Reihenfolge der Datenpunkte ist entscheidend**:
 Widgets werden **nicht permanent aktualisiert**.  
 Die Aktualisierung hängt stark vom Betriebssystem ab und kann **nicht zuverlässig erzwungen** werden.
 
+###Wichtiger Hinweis
+Die App darf nicht komplett beendet werden (AKA "im Multitasking wegwischen"), da sonst die registrierten Hintergrund-Tasks für die Aktualisierung des Widgets mitunter abgebrochen werden und nicht mehr laufen.
+
 ### iOS
 - iOS entscheidet selbst, **wann und wie oft** Widgets aktualisiert werden
 - Hintergrund-Aktualisierungen können **verzögert oder ausgelassen** werden
