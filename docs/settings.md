@@ -21,4 +21,15 @@ Wenn du mit einem IOB Mobile Account angemeldet bist, hast du im Drawer Menü ü
 
 <img style="margin: 16px 32px 16px 16px" src="https://github.com/peter9teufel/iobmobile-issues/blob/main/screenshots/framed/14-account-settings_framed.png?raw=true" width="247" height="500">
 
+## Hilfe und Fehlerberichte
 
+Im Konfigurationsbereich findest du außerdem direkten Zugriff auf:
+
+- die Hilfe
+- den Issue Tracker für Bugs und Feature Requests
+
+## Verwandte Themen
+
+- [IOB Mobile Account](./account)
+- [ioBroker-Konfiguration](./config)
+- [IOB PRO](./iob-pro)

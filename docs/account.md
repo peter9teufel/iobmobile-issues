@@ -1,24 +1,85 @@
-## User Account
+## IOB Mobile Account
 
-Beim Start der App kommst du zum Login Screen, hier hast du die Möglichkeit, dich mit deinem IOB Mobile Account anzumelden oder einen neuen Account zu registrieren. Die Registrierung erfordert nur eine gültige E-Mail Adresse und ein selbst gewähltes Passwort. Du erhältst dann einen Link per E-Mail um deinen Account zu aktivieren, dieser Link **muss** auf deinem Gerät mit der installierten IOB Mobile App, auf dem du die Registrierung gestartet hast, geöffnet werden.
+Ein IOB Mobile Account ist optional. Du kannst die App auch ohne Login verwenden. Das Konto ist vor allem für Cloud-Backups, Wiederherstellung über mehrere Geräte und für die kontoabhängigen PRO-Funktionen gedacht.
+
+### Was der Account bringt
+
+- Cloud-Backups deiner gesamten lokalen App-Konfiguration
+- Wiederherstellung dieser Konfiguration auf anderen Geräten
+- Vergleich verfügbarer Online-Backups mit deinem aktuellen lokalen Stand
+- 30 Tage kostenloser PRO-Test nach der Registrierung
+- kontoabhängige, plattformübergreifende PRO-Nutzung auf bis zu 5 Geräten - auch auf der jeweils anderen Plattform
+
+### Registrierung und Anmeldung
+
+- Registriert wird mit E-Mail-Adresse und Passwort.
+- Nach der Registrierung wird eine Verifizierungs-E-Mail verschickt.
+- Die Verifizierung muss auf einem Gerät geöffnet werden, auf dem IOB Mobile installiert ist.
 
 <img style="margin: 16px 32px 16px 16px" src="https://github.com/peter9teufel/iobmobile-issues/blob/main/screenshots/framed/01-start_framed.png?raw=true" width="247" height="500">
 
-IOB Mobile kann natürlich auch ohne User Account genutzt werden, die Registrierung bietet jedoch folgende Vorteile:
-* Sicherung aller Konfigurationen inkl. Dashboards im IOB Mobile Account (IOB Pro Abo)
-* Die letzten 4 Gesamtbackups deiner Konfigurationen werden aufbewahrt
-* Sicherung der gesamten App Konfiguration immer wenn du etwas an deinen Dashboards änderst (die App fragt dich ob du sichern möchtest, du hast immer die freie Wahl ob eine Sicherung im Account stattfinden soll)
-* Geräteübergreifende Wiederherstellung der gesamten App Konfiguration inkl. Dashboards
-* 30 Tage gratis Testzeitraum für IOB Mobile PRO mit allen App Funktionen (wenn dein automatischer gratis Testzeitraum bei der Registrierung nicht freigeschalten wird, schreib uns an support[at]thweb.net und wir aktivieren die Lizenz für dich)
-* Das Abo deiner IOB Pro Lizenz kann auf bis zu 5 Geräten der anderen Plattform geteilt werden, d.h. wenn du abonnierst IOB Pro auf deinem Hauptgerät das du regelmäßig nutzt (zB. unter iOS auf deinem iPhone), immer wenn du die App nutzt wird der Status deiner Lizenz im Account hinterlegt, über deinen IOB Mobile Account kannst du diese PRO Lizenz nicht nur auf all deinen iOS Geräten (und per Family Sharing auf den Geräten deiner Familien Accounts) sondern auch auf bis zu 5 Android Geräten die mit deinem IOB Mobile Account angemeldet sind nutzen!
-* zukünftige Erweiterungen für IOB Mobile User: sichern und wiederherstellen einzelner Konfigurationen und Dashboards, exklusiver Vorab Zugriff auf Funktionen 
+### E-Mail-Verifikation
 
-Mehr Infos zum IOB Pro Abo findest du unter dem Punkt <a href="./iob-pro">**IOB PRO Abo**</a>.
+Die Verifikation ist nicht nur formal wichtig, sie Voraussetzung dafür, dass plattformübergreifiges PRO-Sharing über den Account genutzt werden kann.
 
-### Account Sharing
-Natürlich kannst du deinen Account mit anderen Personen teilen, um deine App Konfiguration über deinen Account auf andere Geräte zu übertragen, bedenke jedoch:
-* es wird immer die gesamte App Konfiguration gesichert, teile deinen Account also nur mit Personen, die Zugriff auf deine ioBroker Instanzen haben sollen
-* auf Geräten mit deinem eigenen Account wird das Abo ohnehin erkannt und du kannst es auf all deinen eigenen Geräten nutzen
-* über deinen IOB Mobile Account wird auch dein IOB PRO Abo geteilt und kann somit auf bis zu 5 Geräten (zB. anderer Familienmitglieder, andere Plattform) genutzt werden, wenn das Limit von 5 Geräten erreicht ist, kann das Abo mit keinem weiteren Gerät mehr geteilt werden, bevor nicht ein Gerät wieder gelöscht wird.
+In den Account-Einstellungen siehst du:
 
+- ob deine E-Mail verifiziert ist
+- ob Cross-Platform-Abo-Sharing verfügbar ist
+- auf wie vielen Geräten ein geteiltes Abo derzeit verwendet wird
 
+### Passwort zurücksetzen
+
+- Das Zurücksetzen wird per E-Mail-Link gestartet.
+- Der Link muss auf einem Mobilgerät mit installierter IOB-Mobile-App geöffnet werden.
+
+### Cloud-Backups
+
+Wenn du mit einem Account angemeldet bist, kannst du die gesamte lokale App-Konfiguration sichern. Dazu gehören:
+
+- alle Konfigurationen
+- alle Seiten
+- alle Datenpunkte
+- MQTT-Einstellungen je Konfiguration
+
+Die App speichert serverseitig die letzten 4 Backups pro Benutzerkonto. Beim Wiederherstellen wird die komplette lokale Konfiguration überschrieben.
+
+### Backup prüfen und wiederherstellen
+
+In den Account-Einstellungen findest du:
+
+- `Backup prüfen`
+- `Konfiguration sichern`
+- `Backup wiederherstellen`
+
+Beim Prüfen oder Wiederherstellen zeigt die App:
+
+- Zeitpunkt des Backups
+- enthaltene Konfigurationen
+- Seiten und Datenpunkte je Konfiguration
+- lokale und Online-Stände im Vergleich
+
+### PRO über den Account
+
+- 30 Tage Testzeitraum nach Registrierung
+- Freigabe einer aktiven iOS- oder Android-PRO-Lizenz auf bis zu 5 Geräte, auch der jeweils anderen Plattform
+
+Wichtig:
+
+- Die App prüft das Gerätelimit, ist das Limit erreicht, kann kein weiteres Gerät die geteilte Lizenz nutzen, bis ein Gerät entfernt wird.
+- Die Geräteverwaltung ist direkt in der App erreichbar.
+
+### Account löschen
+
+Beim Löschen des Accounts:
+
+- werden Cloud-Backups entfernt
+- geht Cross-Platform-Sharing verloren
+- bleiben lokale Daten auf dem Gerät erhalten
+
+Das Löschen eines Accounts kann **nicht** rückgängig gemacht werden.
+
+### Verwandte Themen
+
+- [IOB PRO](./iob-pro)
+- [Einstellungen](./settings)

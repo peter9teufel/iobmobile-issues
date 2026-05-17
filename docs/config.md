@@ -1,18 +1,110 @@
-## ioBroker Setup
-Um IOB Mobile nutzen zu können, musst du in deiner ioBroker Instanz den **simple-api** und den **socketio** Adapter installieren und jeweils eine Instanz hinzufügen. In den Einstellungen der beiden Adapter kannst du die Ports festlegen, diese benötigst du bei der Konfiguration von IOB Mobile. Die Standard Ports sind 8087 bei SimpleAPI und 8084 bei SocketIO.
+## ioBroker-Konfiguration
 
-Zusätzlich kannst du den MQTT Broker/Client Adapter hinzufügen. Wenn du MQTT nutzt, kannst du mit IOB Mobile Statusinformationen zum Akku deines Geräts via MQTT zu ioBroker senden, so kannst du beispielsweise einen Smartplug an dem dein Smarthome Tablet hängt abhängig vom Akkustand schalten um den Akku regelmäßig zu entladen. Zusätzlich ermöglicht die Nutzung von MQTT das Sichern deiner IOB Mobile Dashboards in ioBroker um diese auf anderen Geräten wiederherzustellen, immer wenn du etwas an einem deiner Dashboards änderst, wird ein Backup dieses Dashboards als Objekt der ersten MQTT Instanz (mqtt.0.*) gespeichert. Die Anzahl an MQTT Backups ist unbegrenzt, wenn du alte MQTT Backups deiner Dashboards löschen möchtest, kannst du das einfach im Objektbaum deiner ioBroker Instanz tun. In den Instanzeinstellungen des MQTT Adapters kannst du wieder den Port, sowie Username und Passwort zur Nutzung von MQTT festlegen. Der Standardport ist 1883.
+Damit IOB Mobile mit deiner ioBroker-Instanz arbeiten kann, müssen die passenden Adapter erreichbar sein.
 
-Grundsätzlich empfehlen wir, die Standardports zu verwenden, du kannst natürlich auch andere Ports definieren, musst diese dann aber beim Setup von IOB Mobile entsprechend anpassen.
+### Pflichtadapter
 
-## IOB Mobile Konfiguration
+Mindestens erforderlich sind:
 
-Die Basis deiner Dashboards in IOB Mobile sind die Konfigurationen zum Verbinden mit deiner ioBroker Instanz. Tippe auf das "+" auf dem Startbildschirm um eine Konfiguration zu erstellen. Der Rest sollte selbsterklärend sein, wähle einen Namen für das Dashboard deiner neuen Konfiguration und trage die Einstellungen zum Verbinden mit deiner ioBroker Instanz ein. Die benötigten Ports und Einstellungen hast du vorhin in den simple-api, socketio und mqtt Instanzen festgelegt. Gib deinen Geräten eindeutige MQTT Namen, diese sind wichtig, wenn du Gerätedaten (Ladestand Akku, Status des Akkus, etc.) überträgst, da diese Infos in einem Unterordner im mqtt.0.* Objektbaum mit dem MQTT Namen des jeweiligen Gerätes abgelegt werden.
+- `simple-api`
+- `socketio`
 
-Speichere deine Konfiguration wenn alle Einstellungen vorgenommen wurden, die neue Konfiguration scheint nun auf der Startseite auf. Tippe auf eine Konfiguration um sie zu öffnen, tippe lange auf eine Konfiguration um sie zu bearbeiten, zu duplizieren oder zu löschen.
+Für beide Adapter muss jeweils eine Instanz laufen.
+
+Typische Standardports:
+
+- `simple-api`: `8087`
+- `socketio`: `8084`
+
+### Optionaler MQTT-Support
+
+Optional kannst du zusätzlich den Adapter `MQTT Broker/Client` verwenden.
+
+MQTT wird in IOB Mobile für diese Funktionen genutzt:
+
+- automatische Dashboard-Backups in ioBroker
+- Anzeige und Wiederherstellung mehrerer MQTT-Backups
+- Übertragung von Gerätestatus wie Akkustand und Ladezustand
+
+Typischer Standardport:
+
+- MQTT: `1883`
+
+### Host, Protokoll und Authentifizierung
+
+Beim Erstellen einer Konfiguration gibst du im Host-Feld nur den Hostnamen oder die IP-Adresse deiner ioBroker-Instanz an.
+
+- kein `http://`
+- kein `https://`
+- kein Port
+
+Beispiele:
+
+- richtig: `192.168.1.200`
+- richtig: `iobroker.local`
+- falsch: `http://192.168.1.200:8081`
+
+Die App ergänzt Protokoll und Ports selbst.
+
+Zusätzliche Optionen pro Konfiguration:
+
+- Authentifizierung für `simple-api` und `socketio`
+- HTTPS für `simple-api` und `socketio`
+- MQTT aktivieren
+- MQTT-Benutzername und Passwort
+- Gerätename für MQTT
+- Gerätestatus regelmäßig per MQTT senden
+
+### Neue Konfiguration anlegen
 
 <img style="margin: 16px 32px 16px 16px" src="https://github.com/peter9teufel/iobmobile-issues/blob/main/screenshots/gif/03-config.gif?raw=true" width="247" height="500">
 
-Du kannst für die gleiche ioBroker Instanz mehrere Konfigurationen anlegen um so verschiedene Dashboards für verschiedene Anwendungsfälle zu realisieren. Beispielsweise kannst du ein Dashboard für dein Smartphone erstellen welches eine umfangreiche Steuerung deines Smarthomes erlaubt und ein zweites Dashboard für ein Smarthome Tablet an der Wand, welches schnellen Zugriff auf die wichtigsten Daten und oft genutzte Funktionen oder Szenen bietet.
+Der Assistent in der App führt in mehreren Schritten durch:
 
+1. Namen und Host festlegen
+2. SimpleAPI- und SocketIO-Port eintragen
+3. optional Authentifizierung und HTTPS aktivieren
+4. optional MQTT aktivieren
+5. optional MQTT-Login hinterlegen
+6. optional Gerätestatus per MQTT einschalten
 
+Beim ersten Speichern legt die App automatisch eine erste Seite `Home` an.
+
+### Mehrere Konfigurationen
+
+Du kannst mehrere Konfigurationen anlegen, auch für dieselbe ioBroker-Instanz. Das ist sinnvoll, wenn du verschiedene Dashboards getrennt pflegen willst, zum Beispiel:
+
+- ein kompaktes Smartphone-Dashboard
+- ein Wandtablet-Dashboard
+- ein separates Dashboard für Gäste oder einzelne Räume
+
+Auf dem Startbildschirm kannst du Konfigurationen:
+
+- öffnen
+- bearbeiten
+- duplizieren
+- löschen
+
+### Verbindungsprüfung
+
+Beim Öffnen einer Konfiguration testet die App die Verbindung gegen `simple-api`. Schlägt der Test fehl, bleibt die Konfiguration zwar lokal vorhanden, das Dashboard kann aber nicht geladen werden.
+
+### MQTT-Besonderheiten
+
+- Für automatische MQTT-Backups verwendet die App die erste MQTT-Instanz, also praktisch `mqtt.0`.
+- Verwende pro Gerät einen eindeutigen MQTT-Gerätenamen.
+- Dieser Name wird auch für Gerätestatus-Themen verwendet.
+
+### Typische Fehlerquellen
+
+- Host mit Protokoll oder Port eingetragen
+- `simple-api` oder `socketio` nicht installiert oder nicht gestartet
+- falsche Ports
+- HTTPS in der App aktiviert, aber nicht in ioBroker eingerichtet
+- Authentifizierung in der App aktiviert, aber Zugangsdaten passen nicht
+- MQTT aktiviert, aber Broker oder Zugangsdaten sind falsch
+
+### Verwandte Themen
+
+- [Dashboard konfigurieren](./dashboard-config)
+- [Einstellungen](./settings)
